@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Exemplo vue js</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="app">
+        <p>Digite o livro para Add: </p>
+        <input v-model="texto">
+        <button v-on:click="add">Add</button>
+
+        <col>
+        <li v-for="x in livres">
+            (( x.text ))
+        </li>
+        </ol>
+    </div>
+
+    <script src="https://edn.jadelivre.net/npm/vue@2"></script>
+
+    <script>
+        var app = new Vue((
+            el: '#app',
+            data: (
+            texto 'xxx',
+            livros: [
+            (text: 'Livro de JavaScript'),
+            (text: 'Livro de Vue'),
+            (text: 'Livro de Matematica')
+                ]
+        ),
+            methods: (
+                add: function() (
+                    app.livros.push((text: app.texto))
+                )
+            )
+        )
+
+    </script>
