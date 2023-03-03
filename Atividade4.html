@@ -19,6 +19,26 @@
         <br><br>
         <label for= "">Email</label><br>
         <input type="text" v-model="email">
+
+        <head>
+          <title>Botão Contador</title>
+          <script>
+              var contador = 0;
+      
+              function incrementar() {
+                  contador++;
+                  document.getElementById("contador").innerHTML = contador;
+              }
+          </script>
+      </head>
+      
+      <body>
+          <h1>Botão Contador</h1>
+          <p>Clique no botão para incrementar o contador:</p>
+          <button onclick="incrementar()">Clique aqui</button>
+          <p>Contador: <span id="contador">0</span></p>
+      </body>
+        
         
         <br><br>
         <label for="">Deseja receber nossas novidades?</label><br>
