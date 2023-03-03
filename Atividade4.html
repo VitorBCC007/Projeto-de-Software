@@ -14,11 +14,7 @@
         <label for="">Paragrafo</label><br>
         <input type ="text" v-model ="paragrafo">
         <br><br>
-        <label for="">Telefone</label><br>
-        <input type="text" v-model="telefone">
-        <br><br>
-        <label for= "">Email</label><br>
-        <input type="text" v-model="email">
+        
 
         <head>
           <title>Botão Contador</title>
@@ -40,38 +36,33 @@
       </body>
         
         
-        <br><br>
-        <label for="">Deseja receber nossas novidades?</label><br>
-        <input type="radio" value="Sim" v-model="novidades"> Sim
-        <input type="radio" value="Não" v-model="novidades"> Não
+      <label for="">Nome</label><br>
+      <input type="text" v-model="nome">
+      <br><br>
+      <label for="">Formulario o que deseja</label><br>
+      <input type="checkbox" value="Filme" v-model="formulario"> Filme<br>
+      <input type="checkbox" value="Serie" v-model="formulario"> Serie<br>
+      <input type="checkbox" value="Novela" v-model="formulario"> Novela<br>
 
-        <br><br>
-        <label for="">Interesses</label><br>
-        <input type="checkbox" value="Futebol" v-model="interesses"> Futebol<br>
-        <input type="checkbox" value="Fórmula 1" v-model="interesses"> Fórmula 1<br>
-        <input type="checkbox" value="Corrida" v-model="interesses"> Corrida<br>
+      <br><br>
+      <label for="">Escolha serie não escolhe novela nem filme pelo amor de deus</label><br>
+      <select v-model="escolha">
+          <option value="The walking">The walking</option>
+          <option value="GOT">GOT</option>
+          <option value="The last">The last</option>
+      </select>
 
-        <br><br>
-        <label for="">Como nos conheceu?</label><br>
-        <select v-model="conheceu">
-            <option value="Google">Google</option>
-            <option value="TV">TV</option>
-            <option value="Revista">Revista</option>
-        </select>
+      <br><br>
 
-        <br><br>
+      <button>Enviar</button>
 
-        <button>Enviar</button>
-
-        <hr>
+      <hr>
 
         Titulo: {{ titulo }} <br>
         Paragrafo: {{ paragrafo }}<br>
-        Telefone: {{ telefone }} <br>
-        Email:{{email}} <br>
-        Novidades: {{ novidades }} <br>
-        Interesses: {{ interesses }} <br>
-        Como nos conheceu? {{ conheceu }} <br>
+        Nome: {{ nome }} <br>
+        Formulario: {{ formulario }} <br>
+        Formulario o que deseja: {{ escolha }} <br>
     </div>
 
 	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
@@ -83,11 +74,8 @@
                 titulo: "Aula de Vue Js!",
                 paragrafo: "  ",
                 nome: "",
-                telefone:"",
-                email:"",
-                novidades:"",
-                interesses:[],
-                conheceu:""
+                formulario: [],
+                escolha: ""
             }
         })
     </script>
